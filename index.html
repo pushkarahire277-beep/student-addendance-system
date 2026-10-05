@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Attendance System</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header>
+    <h1>Student Attendance System</h1>
+    <p>Manage students and daily attendance</p>
+</header>
+
+<div class="container">
+
+    <!-- Dashboard -->
+    <section class="dashboard">
+        <div class="card">
+            <h3>Total Students</h3>
+            <p id="totalStudents">0</p>
+        </div>
+
+        <div class="card present">
+            <h3>Present</h3>
+            <p id="presentCount">0</p>
+        </div>
+
+        <div class="card absent">
+            <h3>Absent</h3>
+            <p id="absentCount">0</p>
+        </div>
+
+        <div class="card late">
+            <h3>Late</h3>
+            <p id="lateCount">0</p>
+        </div>
+    </section>
+
+    <!-- Add Student -->
+    <section class="panel">
+        <h2>Add Student</h2>
+
+        <form id="studentForm">
+
+            <input
+                type="text"
+                id="studentName"
+                placeholder="Student Name"
+                required
+            >
+
+            <input
+                type="text"
+                id="rollNumber"
+                placeholder="Roll Number"
+                required
+            >
+
+            <input
+                type="text"
+                id="studentClass"
+                placeholder="Class"
+                required
+            >
+
+            <button type="submit">
+                Add Student
+            </button>
+
+        </form>
+    </section>
+
+    <!-- Attendance -->
+    <section class="panel">
+
+        <div class="attendance-header">
+            <h2>Mark Attendance</h2>
+
+            <div>
+                <label for="attendanceDate">Date:</label>
+
+                <input
+                    type="date"
+                    id="attendanceDate"
+                >
+            </div>
+        </div>
+
+        <input
+            class="search"
+            type="text"
+            id="search"
+            placeholder="Search student..."
+        >
+
+        <div class="table-container">
+
+            <table>
+
+                <thead>
+                    <tr>
+                        <th>Student</th>
+                        <th>Roll No.</th>
+                        <th>Class</th>
+                        <th>Status</th>
+                        <th>Attendance</th>
+                        <th>Action</th>
+                    </tr>
+                </thead>
+
+                <tbody id="studentTable"></tbody>
+
+            </table>
+
+        </div>
+
+    </section>
+
+</div>
+
+<footer>
+    Student Attendance System © 2026
+</footer>
+
+<script src="script.js"></script>
+
+</body>
+</html>
